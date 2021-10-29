@@ -22,6 +22,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.keyboardDismissMode = .interactive
         // Do any additional setup after loading the view.
     }
     
