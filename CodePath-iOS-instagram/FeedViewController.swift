@@ -121,7 +121,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let post = posts[indexPath.row]
+        let post = posts[indexPath.section]
         let comments = (post["comments"] as? [PFObject]) ?? []
 
         if indexPath.row == comments.count + 1 {
@@ -129,9 +129,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             becomeFirstResponder()
             commentBar.inputTextView.becomeFirstResponder()
         }
-        showsCommentBar = true
-        becomeFirstResponder()
-        commentBar.inputTextView.becomeFirstResponder()
+//        showsCommentBar = true
+//        becomeFirstResponder()
+//        commentBar.inputTextView.becomeFirstResponder()
+        
 //        For testing
 //        let comment =
 //        comment["text"] = "This is a random comment"
